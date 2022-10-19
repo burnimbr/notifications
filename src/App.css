@@ -1,0 +1,76 @@
+.App {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+.App .content {
+  width: 45vw;
+  height: 100%;
+  background-color: white;
+  margin-top: 1em;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.App .header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.App .header .notification {
+  display: flex;
+  width: 35%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.App .header .notification .square {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  padding: 1px;
+  font-weight: 600;
+  background-color: darkblue;
+  color: white;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1000px) {
+  .App {
+    display: flex;
+    justify-content: center;
+  }
+
+  .App .content {
+    width: 65vw;
+    height: 100%;
+    background-color: white;
+    padding: 2rem;
+  }
+  .App .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .App .header .notification {
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .App .header .notification .square {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    padding: 1px;
+    margin-left: 5px;
+    font-weight: 600;
+    background-color: darkblue;
+    color: white;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+}
