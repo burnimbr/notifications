@@ -23,7 +23,13 @@ function Post(props) {
       style={statusStyle}
     >
       <div className="avatar">
-        <img src={avatar} width={50} height={50} className="imageAvatar" />
+        <img
+          src={avatar}
+          width={50}
+          height={50}
+          className="imageAvatar"
+          alt="Profile Image"
+        />
       </div>
       <div className="contentPost">
         <div className="message">
@@ -33,7 +39,11 @@ function Post(props) {
           <div>{time} </div>
         </div>
         <div>
-          {replyImage ? <img src={replyImage} width={50} height={50} /> : <></>}
+          {replyImage ? (
+            <img src={replyImage} width={50} height={50} alt="Reply Image" />
+          ) : (
+            <></>
+          )}
         </div>
         <div className="details"></div>
       </div>
