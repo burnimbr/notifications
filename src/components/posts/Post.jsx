@@ -28,7 +28,7 @@ function Post(props) {
           width={50}
           height={50}
           className="imageAvatar"
-          alt="Profile Image"
+          alt="Profile "
         />
       </div>
       <div className="contentPost">
@@ -44,7 +44,7 @@ function Post(props) {
         </div>
         <div>
           {replyImage ? (
-            <img src={replyImage} width={50} height={50} alt="Reply Image" />
+            <img src={replyImage} width={50} height={50} alt="Reply " />
           ) : (
             <></>
           )}
