@@ -33,11 +33,11 @@ function Post(props) {
       </div>
       <div className="contentPost">
         <div className="message">
-          <a href="/" alt="Link de acesso ">
+          <a href="/" title="Link de acesso ">
             {name}{' '}
           </a>
           {message}
-          <a href="/" alt="Link de acesso ">
+          <a href="/" title="Link de acesso ">
             {linkItem}
           </a>
           <div>{time} </div>
