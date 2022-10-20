@@ -23,20 +23,18 @@ function App(props) {
     fetchData();
   }, [loading]);
 
-  function setAllReadPosts() {
-    setLoading(true);
-    console.log(loading);
-    data.map((post) => {
-      return api
-        .put(`/posts/${post.id}`, { ...post, status: true })
+  async function setAllReadPosts() {
+    for (let i = 0; i < data.length; i++) {
+      setLoading(true);
+      await api
+
+        .put(`posts/${data[i].id}`, { ...data[i], status: true })
         .then((res) => console.log(res.statusText))
         .catch((err) => {
           console.log(err);
         })
-        .finally(() => {
-          setLoading(false);
-        });
-    });
+        .finally(() => setLoading(false));
+    }
   }
 
   async function setUniqueReadPost(post) {
@@ -44,14 +42,15 @@ function App(props) {
     const { id, status } = post;
     const newStatus = status === true ? false : true;
     await api
-      .put(`/posts/${id}`, { ...post, status: newStatus })
+      .put(`posts/${id}`, { ...post, status: newStatus })
       .then((res) => console.log(res.statusText))
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        setLoading(false);
       });
+    setLoading(false);
+  }
+  if (loading) {
+    return <h1>Carregando...</h1>;
   }
 
   return (
